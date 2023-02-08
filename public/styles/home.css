@@ -23,30 +23,30 @@
     min-width: 116px;
 }
 
-.person-div,
+.employee-div,
 .topBox-div {
     width: 93vw;
     border: 2px solid #cfcfcf;
 }
 
-.person-div {
+.employee-div {
     padding: 0 2.5%;
     height: 11%;
-    min-height: 95px;
+    max-height: 95px;
     margin-bottom: 1.5%;
 }
 
-.peopleInfo-div {
+.employeesInfo-div {
     min-width: 116px;
 }
 
-.person-div button {
+.employee-div button {
     width: 10%;
     min-width: 93px;
     margin-left: 16px;
 }
 
-.person-div button,
+.employee-div button,
 .topBox-div button {
     font-size: 19px;
     min-height: 39px;

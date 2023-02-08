@@ -5,10 +5,10 @@
             <button>Adicionar</button>
         </div>
 
-        <div class="people-div">
-            <x-person name="Joäo da Silva" birthdate="01/01/1990" />
-            <x-person name="Joäo da Silva" birthdate="01/01/1990" />
-            <x-person name="Joäo da Silva" birthdate="01/01/1990" />
+        <div class="employees-div">
+            @foreach ($employees as $employee)
+                <x-employee fullName="{{ $employee->fullName }}" birthDate="{{ $employee->birthDate }}" />
+            @endforeach
         </div>
     </main>
 </x-bootstrap>

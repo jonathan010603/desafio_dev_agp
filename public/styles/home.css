@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3vw 0;
 }
 
 .topBox-div {
     height: 13%;
     min-height: 116px;
-    margin: 3vw 0 6% 0;
+    margin-bottom: 6%;
     padding: 0 3%;
 }
 
@@ -18,9 +19,36 @@
 }
 
 .topBox-div button {
-    font-size: 19px;
     width: 11.5%;
     min-width: 116px;
+}
+
+.person-div,
+.topBox-div {
+    width: 93vw;
+    border: 2px solid #cfcfcf;
+}
+
+.person-div {
+    padding: 0 2.5%;
+    height: 11%;
+    min-height: 95px;
+    margin-bottom: 1.5%;
+}
+
+.peopleInfo-div {
+    min-width: 116px;
+}
+
+.person-div button {
+    width: 10%;
+    min-width: 93px;
+    margin-left: 16px;
+}
+
+.person-div button,
+.topBox-div button {
+    font-size: 19px;
     min-height: 39px;
     color: #3d3d3d;
     border-radius: 3px;
@@ -28,13 +56,6 @@
     background-color: transparent;
 }
 
-.person-div, .topBox-div {
-    width: 93vw;
-    border: 2px solid #cfcfcf;
-}
-
-.person-div {
-    height: 11%;
-    min-height: 95px;
-    margin-bottom: 1.5%;
+.name-span {
+    font-size: 19px;
 }

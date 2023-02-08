@@ -6,13 +6,9 @@
         </div>
 
         <div class="people-div">
-            <div class="person-div">
-                
-            </div>
-
-            <div class="person-div">
-
-            </div>
+            <x-person name="Joäo da Silva" birthdate="01/01/1990" />
+            <x-person name="Joäo da Silva" birthdate="01/01/1990" />
+            <x-person name="Joäo da Silva" birthdate="01/01/1990" />
         </div>
     </main>
 </x-bootstrap>

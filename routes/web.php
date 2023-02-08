@@ -9,3 +9,6 @@ Route::get('/', function () {
 
 Route::resource('/employees', EmployeeController::class)
     ->only(['index', 'create', 'store', 'destroy', 'edit']);
+
+Route::post('/employees/store', [EmployeeController::class, 'store'])
+    ->name('employees.store');

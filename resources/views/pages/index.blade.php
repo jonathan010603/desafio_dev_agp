@@ -1,9 +1,9 @@
-<x-bootstrap>
+<x-html>
     <main class="homeContainer-main">
-        <div class="topBox-div d-flex align-items-center justify-content-between">
-            <span><b>Colaboradores de Agape solucöes</b></span>
-            <button>Adicionar</button>
-        </div>
+        <x-topBox>
+            <span><b>Colaboradores de Ágape soluções</b></span>
+            <a href="{{ route('employees.create') }}"><button>Adicionar</button></a>
+        </x-topBox>
 
         <div class="employees-div">
             @foreach ($employees as $employee)
@@ -11,4 +11,4 @@
             @endforeach
         </div>
     </main>
-</x-bootstrap>
+</x-html>

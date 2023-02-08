@@ -17,4 +17,16 @@ class EmployeeController extends Controller
             return view('special.queryError');
         }
     }
+
+    public function create()
+    {
+        return view('pages.create');
+    }
+
+    public function store(Request $request)
+    {
+        Employee::create($request->all());
+
+        return to_route('employees.index');
+    }
 }

@@ -36,6 +36,7 @@ button {
 .topBox-div,
 .formField-div {
     width: 93vw;
+    max-width: 1045px;
     border: 2px solid #cfcfcf;
 }
 
@@ -62,12 +63,18 @@ button {
 
 .formContainer-div {
     width: 93vw;
+    max-width: 1045px;
+}
+
+form button {
+    width: 10%;
+    min-width: 110px;
 }
 
 form {
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 5%;
     justify-content: space-between;
 }
 
@@ -79,24 +86,59 @@ form div {
 form div input {
     border: 2px solid #cfcfcf;
     border-radius: 3px;
+    height: 41px;
+    padding: 0 2%;
 }
 
 .formField-div {
+    row-gap: 44px;
+    flex-wrap: wrap;
     padding: 3% 2.5%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .fullname-div {
     width: 56%;
+    max-width: 570px;
 }
 
 .nickname-div {
     width: 42%;
+    max-width: 382px;
 }
 
-.cpf-div {
-    width: 36%;
-}
-
+.cpf-div,
 .role-div {
-    width: 36%;
+    width: 33%;
+    max-width: 300px;
+    min-width: 222px;
+}
+
+.birthdate-div {
+    width: 27%;
+    max-width: 280px;
+    min-width: 180px;
+}
+
+@media screen and (max-width: 750px) {
+    .formField-div {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 22px;
+    }
+
+    .formField-div div {
+        width: 60%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .formField-div div {
+        width: 70%;
+        min-width: 50%;
+    }
 }

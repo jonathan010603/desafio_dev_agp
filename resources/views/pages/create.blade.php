@@ -32,13 +32,13 @@
                     <div class="cpf-div">
                         <label for="cpf">CPF</label>
                         <input type="text" id="cpf" name="cpf" value="{{ old('cpf') }}" required
-                            oninput="cpfMask(this)">
+                            minlength="14" maxlength="14" oninput="cpfMask(this)">
                     </div>
 
                     <div class="birthdate-div">
                         <label for="birthdate">Data de Nascimento</label>
-                        <input type="text" id="birthdate" name="birthdate" maxlength="10"
-                            oninput="birthdateMask(this)" value="{{ old('birthdate') }}" required>
+                        <input type="date" id="birthdate" name="birthdate" maxlength="10"
+                            value="{{ old('birthdate') }}" required>
                     </div>
 
                     <div class="role-div">

@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->string('fullName');
-            $table->string('nickName')->unique();
-            $table->string('cpf')->unique();
-            $table->date('birthDate')->unique();
-            $table->string('role');
+            $table->string('fullName')->nullable(false);
+            $table->string('nickName')->unique()->nullable(false);
+            $table->string('cpf')->unique()->nullable(false);
+            $table->date('birthDate')->nullable(false);
+            $table->string('role')->nullable(false);
             $table->timestamps();
         });
     }

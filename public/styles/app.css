@@ -34,7 +34,7 @@ button {
 
 .employee-div,
 .topBox-div,
-form {
+.formField-div {
     width: 93vw;
     border: 2px solid #cfcfcf;
 }
@@ -66,7 +66,6 @@ form {
 
 form {
     display: flex;
-    padding: 3% 2.5%;
     flex-wrap: wrap;
     margin-bottom: 5%;
     justify-content: space-between;
@@ -80,6 +79,10 @@ form div {
 form div input {
     border: 2px solid #cfcfcf;
     border-radius: 3px;
+}
+
+.formField-div {
+    padding: 3% 2.5%;
 }
 
 .fullName-div {

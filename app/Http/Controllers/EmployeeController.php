@@ -9,13 +9,9 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        try {
-            $employees = Employee::all();
-            return view('pages.index')
-                ->with('employees', $employees);
-        } catch (QueryException $error) {
-            return view('special.queryError');
-        }
+        $employees = Employee::all();
+        return view('pages.index')
+            ->with('employees', $employees);
     }
 
     public function create()

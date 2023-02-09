@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\Clearcpf;
 use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,4 +14,5 @@ Route::middleware(['serverError'])->group(function () {
 });
 
 Route::post('/employees/store', [EmployeeController::class, 'store'])
-    ->name('employees.store');
+    ->name('employees.store')
+    ->middleware(Clearcpf::class);

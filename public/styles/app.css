@@ -43,7 +43,7 @@ button {
 .employee-div {
     padding: 0 2.5%;
     height: 11%;
-    max-height: 95px;
+    height: 95px;
     margin-bottom: 1.5%;
 }
 
@@ -54,7 +54,12 @@ button {
 .employee-div button {
     width: 10%;
     min-width: 93px;
-    margin-left: 16px;
+}
+
+.employee-div span {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
 }
 
 .name-span {
@@ -128,6 +133,11 @@ form div input {
         flex-direction: column;
         align-items: center;
         row-gap: 22px;
+    }
+
+    .employee-div span {
+        flex-direction: column;
+        row-gap: 3px;
     }
 
     .formField-div div {

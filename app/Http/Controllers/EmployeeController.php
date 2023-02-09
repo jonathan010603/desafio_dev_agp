@@ -24,8 +24,6 @@ class EmployeeController extends Controller
 
     public function store(StoreEmployeeRequest $request)
     {
-        $request->cpf = preg_replace('/[^0-9]/', '', $request->cpf);
-        $request->birthdate = preg_replace();
         Employee::create($request->all());
 
         return to_route('employees.index');

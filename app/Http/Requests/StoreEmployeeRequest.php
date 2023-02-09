@@ -27,7 +27,7 @@ class StoreEmployeeRequest extends FormRequest
         return [
             'fullname' => ['required', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/i'],
             'nickname' => ['required', 'unique:employees', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9_.]+$/i'],
-            'cpf' => ['required', 'unique:employees', 'numeric', 'size:11'],
+            'cpf' => ['required', 'unique:employees', 'size:11'],
             'birthdate' => ['required', 'before:-18 years'],
             'role' => ['required', 'alpha_dash', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9.\-() ]+$/i'],
         ];
@@ -39,7 +39,6 @@ class StoreEmployeeRequest extends FormRequest
             'fullname.required' => 'Preencha o campo "Nome Completo"',
             'nickname.required' => 'Preencha o campo "Apelido"',
             'cpf.required' => 'Preencha o campo "CPF"',
-            'cpf.numeric' => 'O campo "CPF" deve possuir apenas números',
             'cpf.size' => 'O campo "CPF" deve possuir 11 caracteres',
             'birthdate.required' => 'Preencha o campo "Data de Nascimento"',
             'birthdate.before' => 'Colaborador deve possuir mais de 18 anos',

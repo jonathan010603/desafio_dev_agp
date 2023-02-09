@@ -7,7 +7,7 @@
 
         <div class="employees-div">
             @foreach ($employees as $employee)
-                <x-employee fullName="{{ $employee->fullName }}" birthDate="{{ $employee->birthDate }}" />
+                <x-employee fullname="{{ $employee->fullname }}" birthdate="{{ $employee->birthdate }}" />
             @endforeach
         </div>
     </main>

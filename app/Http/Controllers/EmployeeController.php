@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreEmployeeRequest;
 use App\Models\Employee;
+use Gate;
 use Illuminate\Http\Request;
+use Response;
 
 class EmployeeController extends Controller
 {
@@ -19,7 +22,7 @@ class EmployeeController extends Controller
         return view('pages.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreEmployeeRequest $request)
     {
         Employee::create($request->all());
 

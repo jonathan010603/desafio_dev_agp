@@ -18,10 +18,10 @@ class EmployeeFactory extends Factory
     public function definition()
     {
         return [
-            'fullName' => $this->faker->name(),
-            'nickName' => $this->faker->userName(),
+            'fullname' => $this->faker->name(),
+            'nickname' => $this->faker->userName(),
             'cpf' => $this->faker->numerify('###########'),
-            'birthDate' => $this->faker->date(),
+            'birthdate' => $this->faker->date(),
             'role' => $this->faker->word
         ];
     }

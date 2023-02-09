@@ -38,8 +38,10 @@ class StoreEmployeeRequest extends FormRequest
         return [
             'fullname.required' => 'Preencha o campo "Nome Completo"',
             'nickname.required' => 'Preencha o campo "Apelido"',
+            'nickname.unique' => 'Este apelido já está sendo usado',
             'cpf.required' => 'Preencha o campo "CPF"',
             'cpf.size' => 'O campo "CPF" deve possuir 11 caracteres',
+            'cpf.unique' => 'Este CPF já está cadastrado',
             'birthdate.required' => 'Preencha o campo "Data de Nascimento"',
             'birthdate.before' => 'Colaborador deve possuir mais de 18 anos',
             'role.required' => 'Preencha o campo "Cargo"',

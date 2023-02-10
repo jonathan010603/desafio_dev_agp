@@ -29,6 +29,19 @@ class EmployeeController extends Controller
         return to_route('employees.index');
     }
 
+    public function edit(Employee $employee)
+    {
+        return view('pages.edit')
+            ->with('employee', $employee);
+    }
+
+    public function update(Employee $employee, Request $request)
+    {
+        $employee->fill($request->all());
+        $employee->save();
+        return to_route('employees.index');
+    }
+
     public function remove(Employee $deleteEmployee)
     {
         return view('pages.index')

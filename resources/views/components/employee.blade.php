@@ -4,7 +4,9 @@
         <span> {{ date('d/m/Y', strtotime($employee->birthdate)) }} </span>
     </div>
     <span>
-        <button>Editar</button>
+        <a href="{{ route('employees.edit', $employee) }}">
+            <button type="button">Editar</button>
+        </a>
         <a href="{{ route('employees.remove', ['deleteEmployee' => $employee]) }}">
             <button type="button">Excluir</button>
         </a>

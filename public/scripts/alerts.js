@@ -9,11 +9,6 @@ const deleteEmployee = (id, fullname) => {
         cancelButtonText: 'Não',
     }).then((result) => {
         if (result.isConfirmed) {
-            Swal.fire({
-                timer: 700,
-                icon: 'success',
-                showConfirmButton: false
-            });
         }
     })
 }

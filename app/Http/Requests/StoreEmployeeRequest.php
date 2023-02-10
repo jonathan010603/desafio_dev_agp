@@ -27,7 +27,7 @@ class StoreEmployeeRequest extends FormRequest
         return [
             'fullname' => ['required', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/i'],
             'nickname' => ['required', 'unique:employees', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9_.]+$/i'],
-            'cpf' => ['required', 'unique:employees', 'size:11'],
+            'cpf' => ['required', 'unique:employees', 'max:14', 'min:11'],
             'birthdate' => ['required', 'before:-18 years'],
             'role' => ['required', 'alpha_dash', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9.\-() ]+$/i'],
         ];

@@ -17,4 +17,8 @@ Route::post('/employees/store', [EmployeeController::class, 'store'])
     ->name('employees.store')
     ->middleware(Clearcpf::class);
 
-Route::delete('/employee/destroy/{$employee}', [EmployeeController::class, 'destroy']);
+Route::GET('/employees/remove/{deleteEmployee}', [EmployeeController::class, 'remove'])
+    ->name('employees.remove');
+
+Route::delete('/employees/delete/{deleteEmployee}', [EmployeeController::class, 'destroy'])
+    ->name('employees.destroy');

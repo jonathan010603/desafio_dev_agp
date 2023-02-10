@@ -29,9 +29,16 @@ class EmployeeController extends Controller
         return to_route('employees.index');
     }
 
-    public function destroy(Employee $employee)
+    public function remove(Employee $deleteEmployee)
     {
-        dd($employee);
+        return view('pages.index')
+            ->with('employees', Employee::all())
+            ->with('deleteEmployee', $deleteEmployee);
+    }
+
+    public function destroy(Employee $deleteEmployee)
+    {
+        $deleteEmployee->delete();
         return to_route('employees.index');
     }
 }

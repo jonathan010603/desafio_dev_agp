@@ -7,8 +7,26 @@
 
         <div class="employees-div">
             @foreach ($employees as $employee)
-                <x-employee id="{{$employee->id}}" fullname="{{ $employee->fullname }}" birthdate="{{ $employee->birthdate }}" />
+                <x-employee :employee="$employee" />
             @endforeach
         </div>
+
+        @isset($deleteEmployee)
+            <x-modalconfirm :deleteEmployee="$deleteEmployee" doing="Excluindo">
+                <form action="{{ route('employees.destroy', $deleteEmployee) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-success">Confirmar</button>
+                    </div>
+                </form>
+            </x-modalconfirm>
+
+            <script>
+                $(document).ready(() => $('#confirm').modal('show'));
+                $('#confirm').on('hide.bs.modal', () => window.location = '/')
+            </script>
+        @endisset
     </main>
 </x-html>

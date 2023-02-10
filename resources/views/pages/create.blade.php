@@ -14,7 +14,7 @@
                     </ul>
                 </div>
             @endif
-            <form action="{{ route('employees.store') }}" method="POST" class="w-100">
+            <form class="createEmployee-form" action="{{ route('employees.store') }}" method="POST" class="w-100">
                 @csrf
                 <div class="formField-div">
                     <div class="fullname-div">

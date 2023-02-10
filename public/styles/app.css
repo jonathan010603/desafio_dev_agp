@@ -56,7 +56,7 @@ button {
     min-width: 93px;
 }
 
-.employee-div span {
+.employee-div form {
     display: flex;
     justify-content: space-between;
     gap: 16px;
@@ -71,24 +71,24 @@ button {
     max-width: 1045px;
 }
 
-form button {
+.createEmployee-form button {
     width: 10%;
     min-width: 110px;
 }
 
-form {
+.createEmployee-form {
     height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-form div {
+.createEmployee-form div {
     display: flex;
     flex-direction: column;
 }
 
-form div input {
+.createEmployee-form div input {
     border: 2px solid #cfcfcf;
     border-radius: 3px;
     height: 41px;
@@ -135,7 +135,7 @@ form div input {
         row-gap: 22px;
     }
 
-    .employee-div span {
+    .employee-div form {
         flex-direction: column;
         row-gap: 3px;
     }

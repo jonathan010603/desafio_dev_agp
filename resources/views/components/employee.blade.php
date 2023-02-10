@@ -5,6 +5,6 @@
     </div>
     <span>
         <button>Editar</button>
-        <button>Excluir</button>
+        <button onclick="deleteEmployee({{ $id }}, '{{ $fullname }}')">Excluir</button>
     </span>
 </div>

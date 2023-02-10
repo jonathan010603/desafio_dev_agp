@@ -16,3 +16,5 @@ Route::middleware(['serverError'])->group(function () {
 Route::post('/employees/store', [EmployeeController::class, 'store'])
     ->name('employees.store')
     ->middleware(Clearcpf::class);
+
+Route::delete('/employee/destroy/{$employee}', [EmployeeController::class, 'destroy']);

@@ -14,9 +14,6 @@
 <body>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     {{ $slot }}
-    @routes
-    <script src="{{ URL::asset('scripts/alerts.js') }}"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ URL::asset('scripts/masks.js') }}"></script>
     <script src="{{ URL::asset('scripts/cleaners.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

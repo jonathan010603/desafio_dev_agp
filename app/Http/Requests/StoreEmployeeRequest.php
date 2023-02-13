@@ -25,8 +25,8 @@ class StoreEmployeeRequest extends FormRequest
     public function rules()
     {
         return [
-            'fullname' => ['required', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/i'],
-            'nickname' => ['required', 'unique:employees', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9_.]+$/i'],
+            'fullname' => ['required', 'regex:/([a-zA-Z]+\s?\b){2,}/'],
+            'nickname' => ['required', 'unique:employees', 'max:12', 'min:11', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9_.]+$/i'],
             'cpf' => ['required', 'unique:employees', 'max:14', 'min:11'],
             'birthdate' => ['required', 'before:-18 years'],
             'role' => ['required', 'alpha_dash', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9.\-() ]+$/i'],
@@ -37,8 +37,11 @@ class StoreEmployeeRequest extends FormRequest
     {
         return [
             'fullname.required' => 'Preencha o campo "Nome Completo"',
+            'fullname.regex' => '"Nome Completo" deve possuir nome e sobrenome com apenas letras, separados por espaço',
             'nickname.required' => 'Preencha o campo "Apelido"',
             'nickname.unique' => 'Este apelido já está sendo usado',
+            'nickname.max' => 'O apelido deve possuir 12 caracteres, no máximo',
+            'nickname.min' => 'O apelido deve possuir 8 caracteres, no mínimo',
             'cpf.required' => 'Preencha o campo "CPF"',
             'cpf.size' => 'O campo "CPF" deve possuir 11 caracteres',
             'cpf.unique' => 'Este CPF já está cadastrado',

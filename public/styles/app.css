@@ -1,3 +1,24 @@
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3vw 0;
+}
+
+a {
+    display: inline-block;
+}
+
+nav {
+    margin: 0 auto;
+}
+
+nav div {
+    width: 93vw;
+    margin: 0 auto;
+}
+
 button {
     font-size: 19px;
     min-height: 39px;
@@ -7,148 +28,21 @@ button {
     background-color: transparent;
 }
 
-.homeContainer-main {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3vw 0;
-}
-
-.topBox-div {
+.topDiv {
     height: 13%;
     min-height: 116px;
     margin-bottom: 5%;
     padding: 0 3%;
+    width: 93vw;
+    max-width: 1045px;
+    border: 2px solid #cfcfcf;
 }
 
-.topBox-div span {
+.topDiv span {
     font-size: 25px;
 }
 
-.topBox-div button {
+.topDiv button {
     width: 11.5%;
     min-width: 116px;
-}
-
-.employee-div,
-.topBox-div,
-.formField-div {
-    width: 93vw;
-    max-width: 1045px;
-    border: 2px solid #cfcfcf;
-}
-
-.employee-div {
-    padding: 0 2.5%;
-    height: 11%;
-    height: 95px;
-    margin-bottom: 1.5%;
-}
-
-.employeesInfo-div {
-    min-width: 116px;
-}
-
-.employee-div button {
-    width: 10%;
-    min-width: 93px;
-}
-
-.employee-div form {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-.name-span {
-    font-size: 19px;
-}
-
-.formContainer-div {
-    width: 93vw;
-    max-width: 1045px;
-}
-
-.createEmployee-form button {
-    width: 10%;
-    min-width: 110px;
-}
-
-.createEmployee-form {
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.createEmployee-form div {
-    display: flex;
-    flex-direction: column;
-}
-
-.createEmployee-form div input {
-    border: 2px solid #cfcfcf;
-    border-radius: 3px;
-    height: 41px;
-    padding: 0 2%;
-}
-
-.formField-div {
-    row-gap: 44px;
-    flex-wrap: wrap;
-    padding: 3% 2.5%;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.fullname-div {
-    width: 56%;
-    max-width: 570px;
-}
-
-.nickname-div {
-    width: 42%;
-    max-width: 382px;
-}
-
-.cpf-div,
-.role-div {
-    width: 33%;
-    max-width: 300px;
-    min-width: 222px;
-}
-
-.birthdate-div {
-    width: 27%;
-    max-width: 280px;
-    min-width: 180px;
-}
-
-@media screen and (max-width: 750px) {
-    .formField-div {
-        flex-wrap: nowrap;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 22px;
-    }
-
-    .employee-div form {
-        flex-direction: column;
-        row-gap: 3px;
-    }
-
-    .formField-div div {
-        width: 60%;
-        max-width: 100%;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .formField-div div {
-        width: 70%;
-        min-width: 50%;
-    }
 }

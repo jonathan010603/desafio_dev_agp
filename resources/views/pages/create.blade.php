@@ -1,7 +1,7 @@
 <x-html>
     <main>
         <x-topdiv>
-            <span><b>Novo Colaborador</b></span>
+            <span class="headTxtForm"><b>Novo Colaborador</b></span>
         </x-topdiv>
 
         <div class="formContainer d-flex flex-column justify-content-between">

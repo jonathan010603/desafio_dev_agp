@@ -5,10 +5,10 @@
     </div>
     <span>
         <a href="{{ route('employees.edit', $employee) }}">
-            <button type="button">Editar</button>
+            <button class="editBtn bg-primary text-light" type="button">Editar</button>
         </a>
         <a href="{{ route('employees.remove', ['deleteEmployee' => $employee]) }}">
-            <button type="button">Excluir</button>
+            <button class="deleteBtn bg-danger text-light" type="button">Excluir</button>
         </a>
     </span>
 </div>

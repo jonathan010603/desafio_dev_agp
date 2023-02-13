@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreEmployeeRequest extends FormRequest
+class SubmitEmployeeRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,11 +26,22 @@ class StoreEmployeeRequest extends FormRequest
     {
         return [
             'fullname' => ['required', 'regex:/([a-zA-Z]+\s?\b){2,}/'],
-            'nickname' => ['required', 'unique:employees', 'max:12', 'min:11', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9_.]+$/i'],
-            'cpf' => ['required', 'unique:employees', 'max:14', 'min:11'],
+            'nickname' => ['required', 'unique:employees', 'max:12', 'min:8', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9_.]+$/i'],
+            'cpf' => ['required', 'unique:employees', 'size:11'],
             'birthdate' => ['required', 'before:-18 years'],
             'role' => ['required', 'alpha_dash', 'regex:/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ0-9.\-() ]+$/i'],
         ];
+    }
+
+    protected function getNumbers ($str) {
+        return preg_replace("/[^0-9]/", '', $str);
+    }
+
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'cpf' => $this->getNumbers($this->cpf)
+        ]);
     }
 
     public function messages()
@@ -43,7 +54,7 @@ class StoreEmployeeRequest extends FormRequest
             'nickname.max' => 'O apelido deve possuir 12 caracteres, no máximo',
             'nickname.min' => 'O apelido deve possuir 8 caracteres, no mínimo',
             'cpf.required' => 'Preencha o campo "CPF"',
-            'cpf.size' => 'O campo "CPF" deve possuir 11 caracteres',
+            'cpf.size' => 'O campo "CPF" deve possuir 11 caracteres numéricos',
             'cpf.unique' => 'Este CPF já está cadastrado',
             'birthdate.required' => 'Preencha o campo "Data de Nascimento"',
             'birthdate.before' => 'Colaborador deve possuir mais de 18 anos',

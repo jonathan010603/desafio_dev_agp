@@ -35,7 +35,7 @@ button {
     padding: 0 3%;
     width: 93vw;
     max-width: 1045px;
-    border: 2px solid #cfcfcf;
+    border: none;
 }
 
 .topDiv span {
@@ -45,4 +45,10 @@ button {
 .topDiv button {
     width: 11.5%;
     min-width: 116px;
+    border: none;
+}
+
+.topDiv button:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.1s;
 }

@@ -8,14 +8,28 @@
     height: 11%;
     height: 95px;
     margin-bottom: 1.5%;
-    border: 2px solid #cfcfcf;
+    border: none;
+    border-left: 5px solid #0275d8;
+    border-radius: 5px;
 }
 
-.employeeCard button {
-    width: 10%;
-    min-width: 93px;
+.employeeCard:hover {
+    background-color: #f0f2f5;
+    transition: all ease-in-out 0.1s;
 }
 
 .employeeCard div {
     min-width: 116px;
+}
+
+.employeeCard button {
+    width: 10%;
+    border: none;
+    min-width: 93px;
+    margin-left: 5px;
+    transition: all ease-in-out 0.1s;
+}
+
+.employeeCard button:hover {
+    transform: scale(1.1);
 }

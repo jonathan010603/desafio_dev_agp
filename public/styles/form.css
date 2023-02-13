@@ -15,8 +15,9 @@
 }
 
 .formContainer form div input {
-    border: 2px solid #cfcfcf;
     border-radius: 3px;
+    border: none;
+    border-left: 3px solid #0275d8;
     height: 41px;
     padding: 0 2%;
 }
@@ -24,7 +25,7 @@
 .formContainer__fields {
     width: 93vw;
     max-width: 1045px;
-    border: 2px solid #cfcfcf;
+    background-color: #f0f2f5;
     row-gap: 20px;
     flex-wrap: wrap;
     padding: 3% 2.5%;
@@ -59,6 +60,24 @@
     width: 30%;
     max-width: 280px;
     min-width: 180px;
+}
+
+.formContainer button {
+    border: none;
+    color: white;
+    transition: all ease-in-out 0.1s;
+}
+
+.formContainer button:hover {
+    transform: scale(1.1);
+}
+
+.saveBtn {
+    background-color: #80c421;
+}
+
+.cancelBtn {
+    background-color: red;
 }
 
 @media screen and (max-width: 750px) {

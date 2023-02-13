@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreEmployeeRequest;
+use App\Http\Requests\SubmitEmployeeRequest;
 use App\Models\Employee;
 use Gate;
 use Illuminate\Http\Request;
@@ -22,7 +22,7 @@ class EmployeeController extends Controller
         return view('pages.create');
     }
 
-    public function store(StoreEmployeeRequest $request)
+    public function store(SubmitEmployeeRequest $request)
     {
         Employee::create($request->all());
 
@@ -35,8 +35,9 @@ class EmployeeController extends Controller
             ->with('employee', $employee);
     }
 
-    public function update(Employee $employee, Request $request)
+    public function update(Employee $employee, SubmitEmployeeRequest $request)
     {
+        dd($request);
         $employee->fill($request->all());
         $employee->save();
         return to_route('employees.index');

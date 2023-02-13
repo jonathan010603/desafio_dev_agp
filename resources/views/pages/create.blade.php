@@ -10,8 +10,8 @@
                 @csrf
                 <x-formFields />
                 <div class="d-flex flex-row justify-content-between w-100">
-                    <a href="{{ route('employees.index') }}"><button type="button">Cancelar</button></a>
-                    <button type="submit">Salvar</button>
+                    <a href="{{ route('employees.index') }}"><button class="cancelBtn" type="button">Cancelar</button></a>
+                    <button class="saveBtn" type="submit">Salvar</button>
                 </div>
             </form>
         </div>

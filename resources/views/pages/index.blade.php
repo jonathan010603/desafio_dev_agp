@@ -2,7 +2,7 @@
     <main>
         <x-topdiv>
             <span><b>Colaboradores de Ágape soluções</b></span>
-            <a href="{{ route('employees.create') }}"><button>Adicionar</button></a>
+            <a href="{{ route('employees.create') }}"><button class="bg-light text-primary">Adicionar</button></a>
         </x-topdiv>
 
         <div class="employeesWrapper">

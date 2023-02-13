@@ -1,10 +1,10 @@
 <x-html>
-    <main class="homeContainer-main">
+    <main>
         <x-topBox>
             <span><b>Editar Colaborador #{{ $employee->id }}<br>{{ $employee->fullname }}</b></span>
         </x-topBox>
 
-        <div class="formContainer-div d-flex flex-column justify-content-between">
+        <div class="formContainer d-flex flex-column justify-content-between">
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -14,10 +14,10 @@
                     </ul>
                 </div>
             @endif
-            <form class="createEmployee-form" action="{{ route('employees.update', $employee) }}" method="POST" class="w-100">
+            <form action="{{ route('employees.update', $employee) }}" method="POST" class="w-100">
                 @csrf
                 @method('PUT')
-                <div class="formField-div">
+                <div class="formContainer__fields">
                     <div class="fullname-div">
                         <label for="fullname">Nome Completo</label>
                         <input type="text" id="fullname" name="fullname" value="{{ $employee->fullname }}" required

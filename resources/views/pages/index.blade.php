@@ -1,13 +1,13 @@
 <x-html>
-    <main class="homeContainer-main">
+    <main>
         <x-topBox>
             <span><b>Colaboradores de Ágape soluções</b></span>
             <a href="{{ route('employees.create') }}"><button>Adicionar</button></a>
         </x-topBox>
 
-        <div class="employees-div">
+        <div class="employeeCard">
             @foreach ($employees as $employee)
-                <x-employee :employee="$employee" />
+                <x-employeeCard :employee="$employee" />
             @endforeach
         </div>
 

@@ -1,0 +1,87 @@
+.formField-div {
+    width: 93vw;
+    max-width: 1045px;
+    border: 2px solid #cfcfcf;
+}
+
+.formContainer {
+    width: 93vw;
+    max-width: 1045px;
+}
+
+.formContainer form button {
+    width: 10%;
+    min-width: 110px;
+}
+
+.formContainer form {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.formContainer form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.formContainer form div input {
+    border: 2px solid #cfcfcf;
+    border-radius: 3px;
+    height: 41px;
+    padding: 0 2%;
+}
+
+.formField-div {
+    row-gap: 44px;
+    flex-wrap: wrap;
+    padding: 3% 2.5%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.formContainer__fullname {
+    width: 56%;
+    max-width: 570px;
+}
+
+.formContainer__nickname {
+    width: 42%;
+    max-width: 382px;
+}
+
+.formContainer__cpf,
+.formContainer__role {
+    width: 33%;
+    max-width: 300px;
+    min-width: 222px;
+}
+
+.formContainer__birthdate {
+    width: 27%;
+    max-width: 280px;
+    min-width: 180px;
+}
+
+@media screen and (max-width: 750px) {
+    .formContainer__fields {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 22px;
+    }
+
+    .formContainer__fields div {
+        width: 60%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .formContainer__fields div {
+        width: 70%;
+        min-width: 50%;
+    }
+}

@@ -1,0 +1,21 @@
+.employeeCard {
+    width: 93vw;
+    max-width: 1045px;
+    border: 2px solid #cfcfcf;
+}
+
+.employeeCard {
+    padding: 0 2.5%;
+    height: 11%;
+    height: 95px;
+    margin-bottom: 1.5%;
+}
+
+.employeeCard button {
+    width: 10%;
+    min-width: 93px;
+}
+
+.employeeCard div {
+    min-width: 116px;
+}

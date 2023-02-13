@@ -1,3 +1,3 @@
-<div class="topBox-div d-flex align-items-center justify-content-between">
+<div class="topDiv d-flex align-items-center justify-content-between">
     {{ $slot }}
 </div>

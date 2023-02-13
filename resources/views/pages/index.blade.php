@@ -12,7 +12,7 @@
         </div>
 
         @isset($deleteEmployee)
-            <x-modalconfirm :deleteEmployee="$deleteEmployee" doing="Excluindo">
+            <x-modalconfirm id="confirmDelete" :employee="$deleteEmployee" doing="Excluindo">
                 <form action="{{ route('employees.destroy', $deleteEmployee) }}" method="POST">
                     @csrf
                     @method('DELETE')
@@ -24,8 +24,8 @@
             </x-modalconfirm>
 
             <script>
-                $(document).ready(() => $('#confirm').modal('show'));
-                $('#confirm').on('hide.bs.modal', () => window.location = '/')
+                $(document).ready(() => $('#confirmDelete').modal('show'));
+                $('#confirmDelete').on('hide.bs.modal', () => window.location = '/');
             </script>
         @endisset
     </main>

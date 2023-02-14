@@ -15,8 +15,21 @@ nav {
 }
 
 nav div {
-    width: 93vw;
     margin: 0 auto;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.1s;
 }
 
 button {
@@ -69,4 +82,27 @@ button {
 
 .errorContainer button:hover {
     transform: scale(1.3);
+}
+
+@media screen and (max-width: 600px) {
+    .topDiv span {
+        font-size: 20px;
+    }
+
+    .topDiv button {
+        min-width: 80px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .topDiv {
+        flex-direction: column;
+        padding: 15px 0;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .topDiv span {
+        font-size: 15px;
+    }
 }

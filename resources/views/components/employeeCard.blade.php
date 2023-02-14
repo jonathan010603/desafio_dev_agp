@@ -1,7 +1,7 @@
 <div class="employeeCard d-flex justify-content-between align-items-center">
     <div class="d-flex flex-column align-items-start">
         <span class="name-span"><b>{{ $employee->fullname }}</b></span>
-        <span> {{ date('d/m/Y', strtotime($employee->birthdate)) }} </span>
+        <span class="birthdate-span"> {{ date('d/m/Y', strtotime($employee->birthdate)) }} </span>
     </div>
     <span>
         <a href="{{ route('employees.edit', $employee) }}">

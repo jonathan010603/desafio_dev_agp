@@ -19,7 +19,7 @@
 }
 
 .employeeCard div {
-    min-width: 116px;
+    min-width: 100px;
 }
 
 .employeeCard button {
@@ -28,10 +28,29 @@
     margin-left: 5px;
 }
 
-.employeeCard button:hover {
+.employeeCard button:hover,
+.modal-footer button:hover {
     transform: scale(1.1);
 }
 
-.modal-footer button:hover {
-    transform: scale(1.1);
+@media screen and (max-width: 440px) {
+    .employeeCard button {
+        min-width: 70px;
+    }
+
+    .employeeCard .name-span,
+    .employeeCard .birthdate-span {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .employeeCard button {
+        min-width: 60px;
+    }
+
+    .employeeCard .name-span,
+    .employeeCard .birthdate-span {
+        font-size: 11px;
+    }
 }

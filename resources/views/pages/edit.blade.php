@@ -1,7 +1,7 @@
 <x-html>
     <main>
         <x-topdiv>
-            <span class="headTxtForm"><b>Editando Colaborador #{{ $employee->id }}<br>{{ $employee->fullname }}</b></span>
+            <span class="headTxtForm text-center"><b>Editando Colaborador #{{ $employee->id }}<br>{{ $employee->fullname }}</b></span>
         </x-topdiv>
 
         <div class="formContainer d-flex flex-column justify-content-between">

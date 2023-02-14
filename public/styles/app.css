@@ -50,6 +50,7 @@ button {
     width: 93vw;
     max-width: 1045px;
     border: none;
+    row-gap: 15px;
 }
 
 .topDiv span {
@@ -63,10 +64,6 @@ button {
 
 .topDiv button:hover {
     transform: scale(1.1);
-}
-
-.topDiv .headTxtForm {
-    font-size: 28px;
 }
 
 .errorContainer {

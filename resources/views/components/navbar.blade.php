@@ -6,7 +6,7 @@
             <span><img src="/img/hamburger.svg" alt=""></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav w-100 justify-content-end">
                 <li class="nav-item">
                     <a class="nav-link active text-light" aria-current="page"
                         href="{{ route('employees.index') }}">Lista de

@@ -24,12 +24,14 @@
 
 .employeeCard button {
     width: 10%;
-    border: none;
     min-width: 93px;
     margin-left: 5px;
-    transition: all ease-in-out 0.1s;
 }
 
 .employeeCard button:hover {
+    transform: scale(1.1);
+}
+
+.modal-footer button:hover {
     transform: scale(1.1);
 }

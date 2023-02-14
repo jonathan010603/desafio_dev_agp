@@ -62,12 +62,6 @@
     min-width: 180px;
 }
 
-.formContainer button {
-    border: none;
-    color: white;
-    transition: all ease-in-out 0.1s;
-}
-
 .formContainer button:hover {
     transform: scale(1.1);
 }

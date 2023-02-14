@@ -16,9 +16,9 @@
                 <form action="{{ route('employees.destroy', $deleteEmployee) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-success">Confirmar</button>
+                    <div class="modal-footer justify-content-center">
+                        <button class="cancelBtn" type="button" data-bs-dismiss="modal">Cancelar</button>
+                        <button class="saveBtn" type="submit">Confirmar</button>
                     </div>
                 </form>
             </x-modalconfirm>

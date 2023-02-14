@@ -51,6 +51,7 @@ button {
     max-width: 1045px;
     border: none;
     row-gap: 15px;
+    gap: 10px;
 }
 
 .topDiv span {

@@ -19,10 +19,10 @@ class EmployeeFactory extends Factory
     {
         return [
             'fullname' => $this->faker->name(),
-            'nickname' => $this->faker->userName(),
+            'nickname' => $this->faker->regexify('[A-Za-z0-9]{' . mt_rand(8, 12) . '}'),
             'cpf' => $this->faker->numerify('###########'),
-            'birthdate' => $this->faker->date(),
-            'role' => $this->faker->word
+            'birthdate' => $this->faker->dateTimeBetween('-120 years', '-18 years'),
+            'role' => $this->faker->word()
         ];
     }
 }

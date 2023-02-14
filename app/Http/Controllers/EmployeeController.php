@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostStoreRequest;
+use App\Http\Requests\PostUpdateRequest;
 use App\Http\Requests\SubmitEmployeeRequest;
 use App\Models\Employee;
 use Gate;
@@ -22,7 +24,7 @@ class EmployeeController extends Controller
         return view('pages.create');
     }
 
-    public function store(SubmitEmployeeRequest $request)
+    public function store(PostStoreRequest $request)
     {
         Employee::create($request->all());
 
@@ -35,9 +37,8 @@ class EmployeeController extends Controller
             ->with('employee', $employee);
     }
 
-    public function update(Employee $employee, SubmitEmployeeRequest $request)
+    public function update(Employee $employee, PostUpdateRequest $request)
     {
-        dd($request);
         $employee->fill($request->all());
         $employee->save();
         return to_route('employees.index');

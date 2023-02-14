@@ -4,8 +4,9 @@ namespace App\Http\Requests;
 
 use Gate;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
-class SubmitEmployeeRequest extends FormRequest
+class PostStoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -33,7 +34,8 @@ class SubmitEmployeeRequest extends FormRequest
         ];
     }
 
-    protected function getNumbers ($str) {
+    protected function getNumbers($str)
+    {
         return preg_replace("/[^0-9]/", '', $str);
     }
 

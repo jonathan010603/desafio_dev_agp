@@ -56,3 +56,23 @@ button {
 .topDiv .headTxtForm {
     font-size: 28px;
 }
+
+.errorContainer {
+    height: 90vh;
+}
+
+.errorContainer .message {
+    height: 90px;
+    font-size: 25px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.errorContainer button {
+    border: none;
+}
+
+.errorContainer button:hover {
+    transform: scale(1.3);
+    transition: all ease-in-out 0.1s;
+}

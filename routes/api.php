@@ -25,6 +25,6 @@ Route::middleware(['ApiServerError'])->group(function () {
 
 Route::fallback(function () {
     return response()->json([
-        'message' => 'Route not Found. If error persists, contact us at #####@#####.###'
+        'message' => 'Route not Found.'
     ], 404);
 });

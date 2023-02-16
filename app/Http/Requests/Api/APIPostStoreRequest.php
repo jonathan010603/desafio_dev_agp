@@ -61,18 +61,18 @@ class ApiPostStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'fullname.required' => 'Preencha o campo "Nome Completo"',
+            'fullname.required' => "Preencha o campo 'Nome Completo'",
             'fullname.regex' => '"Nome Completo" deve possuir nome e sobrenome com apenas letras, separados por espaço',
-            'nickname.required' => 'Preencha o campo "Apelido"',
+            'nickname.required' => "Preencha o campo 'Apelido'",
             'nickname.unique' => 'Este apelido já está sendo usado',
             'nickname.max' => 'O apelido deve possuir 12 caracteres, no máximo',
             'nickname.min' => 'O apelido deve possuir 8 caracteres, no mínimo',
-            'cpf.required' => 'Preencha o campo "CPF"',
+            'cpf.required' => "Preencha o campo 'CPF'",
             'cpf.size' => 'O campo "CPF" deve possuir 11 caracteres numéricos',
             'cpf.unique' => 'Este CPF já está cadastrado',
-            'birthdate.required' => 'Preencha o campo "Data de Nascimento"',
+            'birthdate.required' => "Preencha o campo 'Data de Nascimento'",
             'birthdate.before' => 'Colaborador deve possuir mais de 18 anos',
-            'role.required' => 'Preencha o campo "Cargo"',
+            'role.required' => "Preencha o campo 'Cargo'",
         ];
     }
 }

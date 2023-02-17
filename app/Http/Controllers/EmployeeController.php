@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PostStoreRequest;
 use App\Http\Requests\PostUpdateRequest;
 use App\Http\Requests\SubmitEmployeeRequest;
+use App\Jobs\DeleteEmployee;
+use App\Jobs\StoreEmployee;
+use App\Jobs\UpdateEmployee;
 use App\Models\Employee;
 use Gate;
 use Illuminate\Http\Request;
@@ -26,8 +29,7 @@ class EmployeeController extends Controller
 
     public function store(PostStoreRequest $request)
     {
-        Employee::create($request->all());
-
+        StoreEmployee::dispatch(collect($request->all()));
         return to_route('employees.index');
     }
 
@@ -39,6 +41,7 @@ class EmployeeController extends Controller
 
     public function update(Employee $employee, PostUpdateRequest $request)
     {
+        UpdateEmployee::dispatch($employee, $request->all());
         $employee->fill($request->all());
         $employee->save();
         return to_route('employees.index');
@@ -53,7 +56,7 @@ class EmployeeController extends Controller
 
     public function destroy(Employee $deleteEmployee)
     {
-        $deleteEmployee->delete();
+        DeleteEmployee::dispatch($deleteEmployee);
         return to_route('employees.index');
     }
 }

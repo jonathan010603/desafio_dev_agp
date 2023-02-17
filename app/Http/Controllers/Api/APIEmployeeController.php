@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Jobs\DeleteEmployee;
+use App\Jobs\StoreEmployee;
+use App\Jobs\UpdateEmployee;
 use App\Models\Employee;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -39,11 +42,11 @@ class APIEmployeeController extends Controller
      */
     public function store(ApiPostStoreRequest $request)
     {
-        $employee = Employee::create($request->all());
+        StoreEmployee::dispatch(collect($request->all()));
 
         return response()->json([
             'message' => 'Employee added successfully!',
-            'employee' => $employee
+            'employee' => $request->all()
         ], 201);
     }
 
@@ -82,7 +85,8 @@ class APIEmployeeController extends Controller
                 'message' => 'Employee not found'
             ], 404);
         } else {
-            $employee->update($request->all());
+            UpdateEmployee::dispatch($employee, $request->all());
+            
             return response()->json([
                 'message' => 'Employee updated successfully!',
                 'employee' => $employee
@@ -105,7 +109,8 @@ class APIEmployeeController extends Controller
                 'message' => 'Employee not found'
             ], 404);
         } else {
-            $employee->delete();
+            DeleteEmployee::dispatch($employee);
+
             return response()->json([
                 'message' => 'Employee removed successfully!',
                 'employee' => $employee
